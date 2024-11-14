@@ -1,5 +1,6 @@
 :root {
     --navColor: #343131;
+    --grayColor: #9e9e9e;
     --navFontColor: #fff;
     --navFontColorAction: #1e90ff; 
     --mainColor: #1e90ff;
@@ -19,9 +20,70 @@ Header, main, aside {
 }
 
 Header {
-    height: 60px;
+    height: 110px;
     width: 100%;
-    background: blue;
+
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+/* 좌측 로고 부분 */
+.header .mainLogo {
+    width: 400px;
+    height: 100%;
+
+    background-image:url('./asset/img/naver.gif');
+    background-size: 100% 100%;
+}
+
+/* 가운데 로고 부분 */
+.header .mainHeader {
+    width: 60%;
+}
+.header .mainUser {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 400px;
+}
+
+.header .mainUser .userInfo {
+    display: flex;
+    justify-content: space-between;
+    justify-items: flex-end;
+}
+
+.header .mainUser .userInfo .userId {
+    display: flex;
+    align-items: flex-end;
+    width: 50%;
+    height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.header .mainUser .userInfo .userId span:nth-child(1) {
+    margin-right: 10px;
+}
+.header .mainUser .userInfo .userBtnArea {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+}
+
+.header .mainUser .userInfo .userBtnArea .btnUser {
+    margin: 0 10px;
+    padding: 3px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--grayColor);
+
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
 }
 
 Nav.main_nav {
