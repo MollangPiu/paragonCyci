@@ -15,17 +15,18 @@
 body {
     font-family: Arial, sans-serif;
 }
-Header, main, aside {
+header, main, aside {
     width: 100%;
 }
 
-Header {
+.header {
     height: 110px;
     width: 100%;
 
     display: flex;
     width: 100%;
     margin-bottom: 10px;
+    justify-content: space-between;
 }
 
 
@@ -33,9 +34,14 @@ Header {
 .header .mainLogo {
     width: 400px;
     height: 100%;
+}
 
+.header .mainLogo .img {
+    width: 100%;
+    height: 100%;
     background-image:url('./asset/img/naver.gif');
     background-size: 100% 100%;
+    cursor: pointer;
 }
 
 /* 가운데 로고 부분 */
@@ -51,6 +57,7 @@ Header {
     height: 60px;
     background-image:url('./asset/img/naver.gif');
     background-size: 100% 100%;
+    cursor: pointer;
 }
 
 /* heaer, 사용자 정보 */
@@ -96,6 +103,7 @@ Header {
     font-size: 14px;
     font-weight: bold;
     text-align: center;
+    cursor: pointer;
 }
 
 Nav.main_nav {
@@ -616,10 +624,34 @@ td:hover .action-buttons {
 
 
 @media (max-width: 764px) {
-    /* Adjust Header */
-    Header {
+    /* Header 부분 */
+    .header {
         height: 50px;
     }
+
+    .header .mainLogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+    }
+
+    .header .mainLogo .img {
+        width: 50%;
+    }
+
+
+    .header .mainHeader {
+        display: none;
+    }
+
+    .header .mainUser {
+        display:none;
+    }
+
+
+
     /* Adjust Navigation */
     Nav.main_nav {
         display:flex;
@@ -717,6 +749,10 @@ td:hover .action-buttons {
 
 /* 이등분 반응형 */
 @media (max-width: 1200px) {
+    /* Header 부분  */
+    .header .mainHeader {
+        display: none;
+    }
     /* aside 이등분( 회계 )  상단 */
     .asideDiv {
         display: flex;
