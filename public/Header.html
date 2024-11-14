@@ -9,7 +9,43 @@
 <body>
     <!-- header 영역 -->
     <Header class="header">
-        
+
+        <!-- 좌측 로고-->
+        <div class="mainLogo">
+            <div class="img"></div>
+        </div>
+
+        <!-- 중앙 로고?? -->
+        <div class="mainHeader">
+            <div class="mainMiddleImg"></div>
+        </div>
+
+        <!-- 우측 사용자 정보 -->
+        <div class="mainUser">
+            <div class="userInfo">
+                <div class="userId">
+                    <span>ID:&nbsp;&nbsp;</span>
+                    <span>superman</span>
+                </div>
+                <div class="userBtnArea">
+                    <div class="btnUser">Log out</div>
+                </div>
+            </div>
+
+            <div class="userBtnImg"></div>
+
+            <!-- 축소 시, user 정보 -->
+            <div class="userMiniInfo" data-mini-user="true">
+                <div class="infoArea" data-mini-user="true">
+                    <span>ID:&nbsp;&nbsp;</span>
+                    <span>superman</span>
+                </div>
+                <div class="btnUser">
+                    Log Out
+                </div>
+            </div>
+        </div>
+
     </Header>
     <!-- 주 메뉴 -->
     <Nav class="main_nav">
@@ -348,6 +384,28 @@
     document.querySelector(".close-button").addEventListener("click", function() {
         document.querySelector(".overlay").style.display = "none";
     });
+
+ 
+    //일반 browser, 마우스가 해당 영역 바깥으로 나갈 경우 pop 종료
+    document.querySelector('.header .mainUser .userMiniInfo').addEventListener('mouseleave', function() {
+        document.querySelector('.header .mainUser .userMiniInfo').style.display = 'none';
+    })
+    
+    //반응형, 사용자 info 만들기
+    document.addEventListener('click', function(e) {
+        const popCheck = e.target.dataset.miniUser;
+        //사용자 div 인식 하기, div에 포함 되면 pop 유지
+        if(popCheck === 'true' ||
+        e.target.className === 'userBtnImg')
+        {
+            document.querySelector('.header .mainUser .userMiniInfo').style.display = 'block';
+        }
+        // 사용자 div 인식하기, div 외부 클릭 시 파악 시 pop 종료, log out 버튼 포함
+        else {
+            document.querySelector('.header .mainUser .userMiniInfo').style.display = 'none';
+        }
+    })
+
 </script>
 </body>
 </html>
