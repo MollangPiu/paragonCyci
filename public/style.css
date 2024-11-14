@@ -94,6 +94,7 @@ Nav.main_nav {
 
 
 .statsArea .statsRow {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -101,6 +102,7 @@ Nav.main_nav {
 
 .statsArea .statsRow .statsDiv {
     padding: 20px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -117,7 +119,22 @@ Nav.main_nav {
     padding: 15px;
 }
 
+.accountBtnArea {
+    display: flex;
+}
+
+.accountBtnArea button {
+    
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 회계 버튼 영역 */
 .accountBtnArea .accountButton-group {
+    width: 50%;
     display: flex;
     justify-content: center;
 }
