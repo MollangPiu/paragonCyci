@@ -641,6 +641,7 @@ td:hover .action-buttons {
     
 }
 
+/* 이등분 반응형 */
 @media (max-width: 1200px) {
     /* aside 이등분( 회계 )  상단 */
     .asideDiv {
