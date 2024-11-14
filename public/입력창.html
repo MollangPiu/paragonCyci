@@ -233,23 +233,121 @@
             <!-- Add more rows here as needed -->
         </tbody>
     </table>
+
+
+    <!-- popup -->
+    <div class="overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>상세 입력</h2>
+                <button class="close-button">&times;</button>
+            </div>
+            <form class="modal-form">
+                <div class="form-group">
+                    <label>구 분:</label>
+                    <!-- <input type="text"> -->
+                    <select>
+                        <option>test1</option>
+                        <option>test2</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>거래일자:</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label>사용자:</label>
+                    <select>
+                        <option>test1</option>
+                        <option>test2</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>결 제:</label>
+                    <select>
+                        <option>test1</option>
+                        <option>test2</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>거래처명:</label>
+                    <select>
+                        <option>test1</option>
+                        <option>test2</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>계정명:</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label>적 요:</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label>프로젝트명:</label>
+                    <input type="text">
+                </div>
+            </form>
+            <table class="modal-table">
+                <thead>
+                    <tr>
+                        <th>TYPE</th>
+                        <th>규격</th>
+                        <th>단가</th>
+                        <th>수량</th>
+                        <th>단위</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>컨버터</td>
+                        <td>A</td>
+                        <td>50000</td>
+                        <td>5</td>
+                        <td>EA</td>
+                    </tr>
+                    <tr>
+                        <td>컨버터</td>
+                        <td>B</td>
+                        <td>100000</td>
+                        <td>5</td>
+                        <td>EA</td>
+                    </tr>
+                    <tr>
+                        <td>컨버터</td>
+                        <td>C</td>
+                        <td>300000</td>
+                        <td>5</td>
+                        <td>EA</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="modal-buttons">
+                <button class="add-button">추가</button>
+                <button class="delete-button">삭제</button>
+            </div>
+        </div>
+    </div>
+    
+
+
+
 </main>
+
+<!-- footer 영역 -->
 <footer style="height: 300px">
 
 </footer>
-<script>
 
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const rows = document.querySelectorAll(".data-table tbody tr");
-        
-            rows.forEach(row => {
-                const actionButtons = row.querySelector(".action-buttons");
-        
-                
-            });
-        });
-        </script>
+<script>
+    document.querySelector(".input-button").addEventListener("click", function() {
+        document.querySelector(".overlay").style.display = "flex";
+    });
+
+    document.querySelector(".close-button").addEventListener("click", function() {
+        document.querySelector(".overlay").style.display = "none";
+    });
+</script>
 </body>
 </html>
