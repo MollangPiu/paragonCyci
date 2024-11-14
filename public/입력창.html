@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력창</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- header 영역 -->
+    <Header class="header">
+        
+    </Header>
+    <!-- 주 메뉴 -->
+    <Nav class="main_nav">
+        <div class="navMainArea">
+            <span class="action">기 장 </span> |
+            <span>회 계 </span> |
+            <span>외 상 </span> |
+            <span>손 익 </span> |
+            <span>부가세</span> |
+        </div>
+        <div class="navSubArea">
+            <span>현재위치: </span>
+            <span>가장</span>
+        </div>
+    </Nav>
+    <!-- 두 번째 메뉴 -->
+    <aside>
+        <div class="form-container">
+    <!-- Category Selection -->
+    <div class="form-row">
+        <label>구분:</label>
+        <div class="radio-group">
+            <input type="radio" id="default" name="category" value="default" checked>
+            <label for="default">보통예금</label>
+
+            <input type="radio" id="card" name="category" value="card">
+            <label for="card">카드매입</label>
+
+            <input type="radio" id="overseas" name="category" value="overseas">
+            <label for="overseas">외상매입</label>
+
+            <input type="radio" id="all" name="category" value="all">
+            <label for="all">전체</label>
+        </div>
+    </div>
+
+    <!-- Date Selection -->
+    <div class="form-row">
+        <label>일자:</label>
+        <div class="date-range">
+            <input type="date" value="2024-01-01">
+            ~
+            <input type="date" value="2024-12-31">
+        </div>
+        <button>1개월</button>
+        <button>3개월</button>
+        <button>6개월</button>
+        <button>9개월</button>
+        <button>1년</button>
+    </div>
+
+    <!-- Internal Search -->
+    <div class="form-row">
+        <label>내역:</label>
+        <input type="text" placeholder="검색">
+    </div>
+
+    <!-- User Selection -->
+    <div class="form-row">
+        <label>사용자:</label>
+        <div class="radio-group">
+            <input type="radio" id="aslim" name="user" value="aslim" checked>
+            <label for="aslim">AsLim</label>
+
+            <input type="radio" id="dslim" name="user" value="dslim">
+            <label for="dslim">DsLim</label>
+
+            <input type="radio" id="mslim" name="user" value="mslim">
+            <label for="mslim">Mslim</label>
+
+            <input type="radio" id="employee1" name="user" value="employee1">
+            <label for="employee1">직원 1</label>
+
+            <input type="radio" id="employee2" name="user" value="employee2">
+            <label for="employee2">직원 2</label>
+
+            <input type="radio" id="all-users" name="user" value="all">
+            <label for="all-users">전체</label>
+        </div>
+    </div>
+
+    <!-- Transaction Name -->
+    <div class="form-row">
+        <label>거래처명:</label>
+        <input type="text" placeholder="검색">
+    </div>
+
+    <!-- Account Name -->
+    <div class="form-row">
+        <label>계정명:</label>
+        <select class="select-dropdown">
+            <option>선택</option>
+            <option>Account 1</option>
+            <option>Account 2</option>
+        </select>
+    </div>
+
+    <!-- Project Selection -->
+    <div class="form-row">
+        <label>PROJECT:</label>
+        <select class="select-dropdown">
+            <option>선택</option>
+            <option>Project A</option>
+            <option>Project B</option>
+        </select>
+    </div>
+
+    <!-- Buttons -->
+    <div class="button-group right">
+        <!-- 버튼 우측 구역-->
+         <div>
+            <button class="input-button">입력</button>
+        </div>
+    </div>
+    <div class="button-group left">
+        
+        <!-- 버튼 좌측 구역-->
+         <div>
+            <button class="query-button">조회</button>
+            <button class="reset-button">초기화</button>
+        </div>
+    </div>
+</div>
+</aside>
+
+<!-- main 영역-->
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>구분</th>
+            <th>일자</th>
+            <th>내역 및 품명</th>
+            <th>수량</th>
+            <th>단가</th>
+            <th>공급가액</th>
+            <th>부가세</th>
+            <th>합계금액</th>
+            <th>사용자</th>
+            <th>결제</th>
+            <th>거래처명</th>
+            <th>계정명</th>
+            <th>적요</th>
+            <th>프로젝트명</th>
+            <th>기타</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>보통예금</td>
+            <td>2024-08-02</td>
+            <td>판넬</td>
+            <td>1</td>
+            <td>Set</td>
+            <td>50,000,000</td>
+            <td>5,000,000</td>
+            <td>55,000,000</td>
+            <td>DS</td>
+            <td>통장 1</td>
+            <td>일신산업전기</td>
+            <td>자재대</td>
+            <td>명판 수정중</td>
+            <td>RAS</td>
+            <!-- 기타 button -->
+            <td>
+                <div class="action-buttons" style="border: 1px solid red">
+                    <button class="edit-button">수정</button>
+                    <button class="delete-button">삭제</button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>보통예금</td>
+            <td>2024-08-02</td>
+            <td>판넬</td>
+            <td>1</td>
+            <td>Set</td>
+            <td>50,000,000</td>
+            <td>5,000,000</td>
+            <td>55,000,000</td>
+            <td>DS</td>
+            <td>통장 1</td>
+            <td>일신산업전기</td>
+            <td>자재대</td>
+            <td>명판 수정중</td>
+            <td>RAS</td>
+            <!-- 기타 button -->
+            <td>
+                <div class="action-buttons" style="border: 1px solid red">
+                    <button class="edit-button">수정</button>
+                    <button class="delete-button">삭제</button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>보통예금</td>
+            <td>2024-08-02</td>
+            <td>판넬</td>
+            <td>1</td>
+            <td>Set</td>
+            <td>50,000,000</td>
+            <td>5,000,000</td>
+            <td>55,000,000</td>
+            <td>DS</td>
+            <td>통장 1</td>
+            <td>일신산업전기</td>
+            <td>자재대</td>
+            <td>명판 수정중</td>
+            <td>RAS</td>
+            <!-- 기타 button -->
+            <td>
+                <div class="action-buttons" style="border: 1px solid red">
+                    <button class="edit-button">수정</button>
+                    <button class="delete-button">삭제</button>
+                </div>
+            </td>
+        </tr>
+        <!-- Add more rows here as needed -->
+    </tbody>
+</table>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const rows = document.querySelectorAll(".data-table tbody tr");
+    
+        rows.forEach(row => {
+            const actionButtons = row.querySelector(".action-buttons");
+    
+            if (actionButtons) {
+                // Get the row's bounding box to calculate its top position
+                const rowRect = row.getBoundingClientRect();
+                const tableRect = row.closest("table").getBoundingClientRect();
+                const offsetTop = rowRect.top - tableRect.top;
+    
+                // Adjust the top position slightly upward (subtract a few pixels)
+                actionButtons.style.top = `${offsetTop + rowRect.height / 2 - 5}px`;
+            }
+        });
+    });
+    </script>
+</body>
+</html>

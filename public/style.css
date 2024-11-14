@@ -1,0 +1,269 @@
+:root {
+    --navColor: #343131;
+    --navFontColor: #fff;
+    --navFontColorAction: #A04747; 
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+Header {
+    height: 60px;
+    width: 100%;
+    background: blue;
+}
+
+Nav.main_nav {
+    padding: 10px;
+    height: 30px;
+    width: 100%;
+    background-color: var(--navColor);
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_nav .navMainArea {
+    margin-left: 30px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.main_nav .navMainArea span {
+    margin: 0 10px;
+    color: var(--navFontColor);
+    cursor: pointer;
+}
+.main_nav .navMainArea span.action {
+    color: var(--navFontColorAction)
+}
+.main_nav .navSubArea {
+    margin-right: 50px;
+
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--navFontColor);
+}
+
+/* Form Container */
+.form-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Form Row */
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-row label {
+    width: 100px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.form-row input[type="text"],
+.form-row select {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-row input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Date Range */
+.date-range {
+    display: flex;
+    align-items: center;
+}
+
+.date-range input[type="date"] {
+    width: 130px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.date-range button {
+    margin: 0 5px;
+    padding: 8px 12px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Buttons */
+.button-group.left {
+    left: 380px;
+    width: 70%;
+}
+.button-group {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    border: 3px solid red;
+}
+.button-group.right {
+    right: 80px;
+} 
+
+.button-group button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-group .query-button {
+    background-color: #f8c545;
+    color: #fff;
+}
+
+.button-group .reset-button {
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+.button-group .input-button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Radio Group */
+.radio-group {
+    display: flex;
+    align-items: center;
+}
+
+.radio-group label {
+    margin-right: 15px;
+}
+
+/* Dropdown Selection */
+.select-dropdown {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Radio Buttons */
+.radio-group input[type="radio"] + label {
+    margin-right: 10px;
+}
+
+/* Data Table */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.data-table thead {
+    background-color: #f7f7f7;
+    font-weight: bold;
+}
+
+.data-table th, .data-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.data-table th {
+    background-color: #f5f5f5;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.data-table td {
+    font-size: 14px;
+}
+
+/* Table Row Hover Effect */
+.data-table tbody tr:hover {
+    background-color: #f1f1f1; /* Slightly darker background on row hover */
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+
+/* Action Buttons Container */
+.action-buttons {
+    position: absolute;
+    right: 10px; /* Align the buttons to the right inside the cell */
+    display: flex;
+    gap: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Smooth fade effect */
+}
+
+/* Show buttons on cell hover */
+td:hover .action-buttons {
+    opacity: 1;
+}
+
+/* Action Buttons Styling */
+.action-buttons button {
+    padding: 8px 16px; /* Increased padding for larger button size */
+    font-size: 14px;
+    min-width: 60px; /* Minimum button width for better readability */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    line-height: 1; /* Ensures text is vertically centered */
+}
+
+.edit-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.delete-button {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
+/* Optional: Button hover effect */
+.edit-button:hover {
+    background-color: #45a049;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Table Row Hover Effect */
+.data-table tbody tr:hover {
+    background-color: #f1f1f1; /* Slightly darker background on row hover */
+    transition: background-color 0.3s ease;
+}
