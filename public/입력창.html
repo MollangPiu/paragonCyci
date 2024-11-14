@@ -54,11 +54,13 @@
             ~
             <input type="date" value="2024-12-31">
         </div>
-        <button>1개월</button>
-        <button>3개월</button>
-        <button>6개월</button>
-        <button>9개월</button>
-        <button>1년</button>
+        <div class="aside_action-buttons">
+            <button>1개월</button>
+            <button>3개월</button>
+            <button>6개월</button>
+            <button>9개월</button>
+            <button>1년</button>
+        </div>
     </div>
 
     <!-- Internal Search -->
@@ -230,28 +232,22 @@
     </tbody>
 </table>
 
+<footer style="height: 300px">
+
+</footer>
 <script>
-    //TR 위치 조정하기
-    document.addEventListener("DOMContentLoaded", function() {
-        const rows = document.querySelectorAll(".data-table tbody tr");
-    
-        rows.forEach(row => {
-            const actionButtons = row.querySelector(".action-buttons");
-    
-            if (actionButtons) {
-                // Calculate the offset of each row relative to the table
-                const rowRect = row.getBoundingClientRect();
-                console.log('rowRect: ', rowRect.top);
-                const tableRect = row.closest("table").getBoundingClientRect();
-                console.log('table: ', tableRect.top)
-                const offsetTop = rowRect.top - tableRect.top;
-    
-                // Set the top position to place the buttons in line with the row
-                actionButtons.style.top = rowRect.top;
-                //actionButtons.style.top = `${offsetTop + rowRect.height / 2 - actionButtons.offsetHeight / 2}px`;
-            }
-        });
-    });
+
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const rows = document.querySelectorAll(".data-table tbody tr");
+        
+            rows.forEach(row => {
+                const actionButtons = row.querySelector(".action-buttons");
+        
+                
+            });
+        });
+        </script>
 </body>
 </html>
