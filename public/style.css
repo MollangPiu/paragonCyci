@@ -74,7 +74,9 @@ header, main, aside {
     justify-items: flex-end;
 }
 
-.header .mainUser .userInfo .userBtnImg {
+/* 반응형, 사용자 정보 pop창 */
+.header .mainUser .userInfo .userBtnImg,
+.header .mainUser .userMiniInfo {
     display: none;
 }
 
