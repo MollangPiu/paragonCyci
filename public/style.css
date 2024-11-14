@@ -85,18 +85,13 @@ Nav.main_nav {
 
 /* 영역 체크 하기 */
 .asideDiv > div:nth-child(1) {
-    border: 3px solid blue;
+    /* border: 3px solid blue; */
 }
 
 .asideDiv > div:nth-child(2) {
-    border: 3px solid green;
-    height: 300px;
     width: 50%;
 }
 
-.statsArea {
-    border: 3px solid gray;
-}
 
 .statsArea .statsRow {
     display: flex;
@@ -120,6 +115,14 @@ Nav.main_nav {
     color: white;
     font-size:20px;
     padding: 15px;
+}
+
+.accountBtnArea .accountButton-group {
+    display: flex;
+    justify-content: center;
+}
+.accountBtnArea div button{
+    margin: 10px;
 }
 
 /* Form Row */
@@ -210,17 +213,17 @@ Nav.main_nav {
     cursor: pointer;
 }
 
-.button-group .query-button {
+.query-button {
     background-color: #f8c545;
     color: #fff;
 }
 
-.button-group .reset-button {
+.reset-button {
     background-color: #1e90ff;
     color: #fff;
 }
 
-.button-group .input-button {
+.input-button {
     background-color: #007bff;
     color: #fff;
 }
