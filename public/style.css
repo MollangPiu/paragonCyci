@@ -1,7 +1,7 @@
 :root {
     --navColor: #343131;
     --navFontColor: #fff;
-    --navFontColorAction: #A04747; 
+    --navFontColorAction: #1e90ff; 
     --mainColor: #1e90ff;
     --mainColorHover: #007bff;
 }
@@ -49,12 +49,19 @@ Nav.main_nav {
 .main_nav .navMainArea span.action {
     color: var(--navFontColorAction)
 }
+
+/* 현재위치 */
 .main_nav .navSubArea {
     margin-right: 50px;
 
-    font-size: 16px;
     font-weight: bold;
     color: var(--navFontColor);
+}
+.main_nav .navSubArea span:nth-child(1) {
+    font-size: 14px;
+}
+.main_nav .navSubARea span:nth-child(2) {
+    font-size: 16px;
 }
 
 /* Form Container */
@@ -70,14 +77,92 @@ Nav.main_nav {
     border-radius: 8px;
 }
 
+.asideDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* 영역 체크 하기 */
+.asideDiv > div:nth-child(1) {
+    /* border: 3px solid blue; */
+}
+
+.asideDiv > div:nth-child(2) {
+    width: 50%;
+}
+
+
+.statsArea .statsRow {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.statsArea .statsRow .statsDiv {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.statsArea .statsRow .statsDiv .displayStatus {
+    margin-left: 10px;
+    width: 150px;
+    height: 50px;
+    background-color: #9c9c9c;
+    border-radius: 15px;
+    color: white;
+    font-size:20px;
+    padding: 15px;
+}
+
+.accountBtnArea {
+    display: flex;
+}
+
+.accountBtnArea button {
+    
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 회계 버튼 영역 */
+.accountBtnArea .accountButton-group {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.accountBtnArea div button{
+    margin: 10px;
+}
+
 /* Form Row */
 .form-row {
     display: flex;
+    flex-direction: row;
     align-items: center;
     margin-bottom: 10px;
 }
 
+/* aside 아래로 보내기 */
+.form-column {
+    flex-direction: column;
+    align-items: start;
+    justify-items: center;
+}
 
+/* 회계, 일자 개월 체크 */
+.form-column .accountSub {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
 
 
 .form-row label {
@@ -145,17 +230,17 @@ Nav.main_nav {
     cursor: pointer;
 }
 
-.button-group .query-button {
+.query-button {
     background-color: #f8c545;
     color: #fff;
 }
 
-.button-group .reset-button {
+.reset-button {
     background-color: #1e90ff;
     color: #fff;
 }
 
-.button-group .input-button {
+.input-button {
     background-color: #007bff;
     color: #fff;
 }
