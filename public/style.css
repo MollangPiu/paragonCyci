@@ -1,7 +1,7 @@
 :root {
     --navColor: #343131;
     --navFontColor: #fff;
-    --navFontColorAction: #A04747; 
+    --navFontColorAction: #1e90ff; 
     --mainColor: #1e90ff;
     --mainColorHover: #007bff;
 }
@@ -49,12 +49,19 @@ Nav.main_nav {
 .main_nav .navMainArea span.action {
     color: var(--navFontColorAction)
 }
+
+/* 현재위치 */
 .main_nav .navSubArea {
     margin-right: 50px;
 
-    font-size: 16px;
     font-weight: bold;
     color: var(--navFontColor);
+}
+.main_nav .navSubArea span:nth-child(1) {
+    font-size: 14px;
+}
+.main_nav .navSubARea span:nth-child(2) {
+    font-size: 16px;
 }
 
 /* Form Container */
