@@ -14,6 +14,9 @@
 body {
     font-family: Arial, sans-serif;
 }
+Header, main, aside {
+    width: 100%;
+}
 
 Header {
     height: 60px;
@@ -184,13 +187,19 @@ Nav.main_nav {
 }
 
 
+/* 메인 영역 */
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Allows horizontal scrolling */
+}
 
-/* Data Table */
 .data-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    /* Optional: Prevents table from exceeding container width */
+    table-layout: auto;
 }
+
 
 .data-table thead {
     background-color: #f7f7f7;
@@ -370,11 +379,17 @@ td:hover .action-buttons {
         margin: 5px 0;
     }
 
-    /* Data Table - Adjust font size and padding */
-    .data-table th,
-    .data-table td {
-        padding: 8px;
-        font-size: 12px;
+    .data-table {
+        /* Optional: Change to fixed layout if content forces cells to be too wide */
+        table-layout: fixed;
+    }
+
+    .data-table th, .data-table td {
+        white-space: nowrap; /* Prevents text wrapping */
+    }
+
+    .minHidden {
+        display:none;
     }
     
     /* Hide or reposition the action buttons */
