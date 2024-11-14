@@ -28,105 +28,69 @@
     <!-- 두 번째 메뉴 -->
     <aside>
         <div class="form-container">
-    <!-- Category Selection -->
-    <div class="form-row">
-        <label>구분:</label>
-        <div class="radio-group">
-            <input type="radio" name="category" value="card1" checked>
-            <label for="default">카드1</label>
+            <!-- Category Selection -->
 
-            <input type="radio" name="category" value="card2">
-            <label for="card">카드2</label>
+            <!-- 영역 나누기 -->
+            <div class="asideDiv">
+                
+                <!-- 첫 번째 영역-->
+                <div>
+                    <div class="form-row">
+                        <label>구분:</label>
+                        <div class="radio-group">
+                            <input type="radio" name="category" value="card1" checked>
+                            <label for="default">카드1</label>
 
-            <input type="radio" name="category" value="card3">
-            <label for="overseas">카드3</label>
+                            <input type="radio" name="category" value="card2">
+                            <label for="card">카드2</label>
 
-            <input type="radio" name="category" value="card4">
-            <label for="all">카드4</label>
+                            <input type="radio" name="category" value="card3">
+                            <label for="overseas">카드3</label>
 
-            <input type="radio" name="category" value="card5">
-            <label for="all">카드5</label>
+                            <input type="radio" name="category" value="card4">
+                            <label for="all">카드4</label>
 
-            <input type="radio" name="category" value="all">
-            <label for="all">전체</label>
-        </div>
-    </div>
+                            <input type="radio" name="category" value="card5">
+                            <label for="all">카드5</label>
 
-    <!-- Date Selection -->
-    <div class="form-row form-column">
-        <div class="accountSub">
-            <label>일자:</label>
-            <div class="date-range">
-                <input type="date" value="2024-01-01">
-                ~
-                <input type="date" value="2024-12-31">
+                            <input type="radio" name="category" value="all">
+                            <label for="all">전체</label>
+                        </div>
+                    </div>
+
+                    <!-- Date Selection -->
+                    <div class="form-row form-column">
+                        <div class="accountSub">
+                            <label>일자:</label>
+                            <div class="date-range">
+                                <input type="date" value="2024-01-01">
+                                ~
+                                <input type="date" value="2024-12-31">
+                            </div>
+                        </div>
+                        <div class="aside_action-buttons accountAside" style="margin-left: 110px">
+                            <button>1개월</button>
+                            <button>3개월</button>
+                            <button>6개월</button>
+                            <button>9개월</button>
+                            <button>1년</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- aside 우측 영역-->
+                <div>
+
+                    <div class="statsArea">
+
+                    </div>
+
+                    
+                </div>
+            <!-- asideSub 종료-->
             </div>
-        </div>
-        <div class="aside_action-buttons accountAside" style="margin-left: 110px">
-            <button>1개월</button>
-            <button>3개월</button>
-            <button>6개월</button>
-            <button>9개월</button>
-            <button>1년</button>
-        </div>
-    </div>
 
-    <!-- Internal Search -->
-    <div class="form-row">
-        <label>내역:</label>
-        <input type="text" placeholder="검색">
-    </div>
-
-    <!-- User Selection -->
-    <div class="form-row">
-        <label>사용자:</label>
-        <div class="radio-group">
-            <input type="radio" id="aslim" name="user" value="aslim" checked>
-            <label for="aslim">AsLim</label>
-
-            <input type="radio" id="dslim" name="user" value="dslim">
-            <label for="dslim">DsLim</label>
-
-            <input type="radio" id="mslim" name="user" value="mslim">
-            <label for="mslim">Mslim</label>
-
-            <input type="radio" id="employee1" name="user" value="employee1">
-            <label for="employee1">직원 1</label>
-
-            <input type="radio" id="employee2" name="user" value="employee2">
-            <label for="employee2">직원 2</label>
-
-            <input type="radio" id="all-users" name="user" value="all">
-            <label for="all-users">전체</label>
-        </div>
-    </div>
-
-    <!-- Transaction Name -->
-    <div class="form-row">
-        <label>거래처명:</label>
-        <input type="text" placeholder="검색">
-    </div>
-
-    <!-- Account Name -->
-    <div class="form-row">
-        <label>계정명:</label>
-        <select class="select-dropdown">
-            <option>선택</option>
-            <option>Account 1</option>
-            <option>Account 2</option>
-        </select>
-    </div>
-
-    <!-- Project Selection -->
-    <div class="form-row">
-        <label>PROJECT:</label>
-        <select class="select-dropdown">
-            <option>선택</option>
-            <option>Project A</option>
-            <option>Project B</option>
-        </select>
-    </div>
-
+            
     <!-- Buttons -->
     <div class="button-group right">
         <!-- 버튼 우측 구역-->

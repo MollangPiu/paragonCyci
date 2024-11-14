@@ -77,6 +77,27 @@ Nav.main_nav {
     border-radius: 8px;
 }
 
+.asideDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* 영역 체크 하기 */
+.asideDiv > div:nth-child(1) {
+    border: 3px solid blue;
+}
+
+.asideDiv > div:nth-child(2) {
+    border: 3px solid green;
+    height: 300px;
+    width: 50%;
+}
+
+.statsArea {
+    border: 3px solid gray;
+}
+
 /* Form Row */
 .form-row {
     display: flex;
@@ -85,12 +106,14 @@ Nav.main_nav {
     margin-bottom: 10px;
 }
 
+/* aside 아래로 보내기 */
 .form-column {
     flex-direction: column;
     align-items: start;
     justify-items: center;
 }
 
+/* 회계, 일자 개월 체크 */
 .form-column .accountSub {
     display: flex;
     flex-direction: row;
