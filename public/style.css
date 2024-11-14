@@ -125,7 +125,6 @@ Nav.main_nav {
     justify-content: space-between;
     margin-top: 20px;
 
-    border: 3px solid red;
 }
 .button-group.right {
     right: 80px;
@@ -217,14 +216,16 @@ Nav.main_nav {
 
 
 
-/* Action Buttons Container */
 .action-buttons {
+    padding: 10px;
+    border-radius: 5px;
     position: absolute;
-    right: 10px; /* Align the buttons to the right inside the cell */
+    right: 10px;
     display: flex;
     gap: 8px;
     opacity: 0;
-    transition: opacity 0.3s ease; /* Smooth fade effect */
+    transition: opacity 0.3s ease;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow effect */
 }
 
 /* Show buttons on cell hover */
@@ -234,26 +235,26 @@ td:hover .action-buttons {
 
 /* Action Buttons Styling */
 .action-buttons button {
-    padding: 8px 16px; /* Increased padding for larger button size */
+    padding: 8px 16px;
     font-size: 14px;
-    min-width: 60px; /* Minimum button width for better readability */
+    min-width: 60px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    line-height: 1; /* Ensures text is vertically centered */
+    line-height: 1;
 }
 
 .edit-button {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     color: white;
 }
 
 .delete-button {
-    background-color: #f44336; /* Red */
+    background-color: #f44336;
     color: white;
 }
 
-/* Optional: Button hover effect */
+/* Button Hover Effect */
 .edit-button:hover {
     background-color: #45a049;
 }
@@ -264,6 +265,6 @@ td:hover .action-buttons {
 
 /* Table Row Hover Effect */
 .data-table tbody tr:hover {
-    background-color: #f1f1f1; /* Slightly darker background on row hover */
+    background-color: #f1f1f1;
     transition: background-color 0.3s ease;
 }

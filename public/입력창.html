@@ -174,7 +174,7 @@
             <td>RAS</td>
             <!-- 기타 button -->
             <td>
-                <div class="action-buttons" style="border: 1px solid red">
+                <div class="action-buttons">
                     <button class="edit-button">수정</button>
                     <button class="delete-button">삭제</button>
                 </div>
@@ -197,7 +197,7 @@
             <td>RAS</td>
             <!-- 기타 button -->
             <td>
-                <div class="action-buttons" style="border: 1px solid red">
+                <div class="action-buttons">
                     <button class="edit-button">수정</button>
                     <button class="delete-button">삭제</button>
                 </div>
@@ -220,7 +220,7 @@
             <td>RAS</td>
             <!-- 기타 button -->
             <td>
-                <div class="action-buttons" style="border: 1px solid red">
+                <div class="action-buttons">
                     <button class="edit-button">수정</button>
                     <button class="delete-button">삭제</button>
                 </div>
@@ -231,6 +231,7 @@
 </table>
 
 <script>
+    //TR 위치 조정하기
     document.addEventListener("DOMContentLoaded", function() {
         const rows = document.querySelectorAll(".data-table tbody tr");
     
@@ -238,13 +239,16 @@
             const actionButtons = row.querySelector(".action-buttons");
     
             if (actionButtons) {
-                // Get the row's bounding box to calculate its top position
+                // Calculate the offset of each row relative to the table
                 const rowRect = row.getBoundingClientRect();
+                console.log('rowRect: ', rowRect.top);
                 const tableRect = row.closest("table").getBoundingClientRect();
+                console.log('table: ', tableRect.top)
                 const offsetTop = rowRect.top - tableRect.top;
     
-                // Adjust the top position slightly upward (subtract a few pixels)
-                actionButtons.style.top = `${offsetTop + rowRect.height / 2 - 5}px`;
+                // Set the top position to place the buttons in line with the row
+                actionButtons.style.top = rowRect.top;
+                //actionButtons.style.top = `${offsetTop + rowRect.height / 2 - actionButtons.offsetHeight / 2}px`;
             }
         });
     });
