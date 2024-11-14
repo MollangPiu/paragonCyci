@@ -124,7 +124,6 @@ Nav.main_nav {
 /* Buttons */
 .button-group.left {
     left: 380px;
-    width: 70%;
 }
 .button-group {
     position: absolute;
@@ -313,17 +312,20 @@ td:hover .action-buttons {
     Header {
         height: 50px;
     }
-
     /* Adjust Navigation */
     Nav.main_nav {
+        display:flex;
+        align-items: center;
         flex-direction: column;
-        align-items: flex-start;
         padding: 5px;
     }
-    .main_nav .navMainArea,
-    .main_nav .navSubArea {
-        font-size: 14px;
+    .main_nav .navMainArea{
+        font-size: 16px;
+        font-weight: bold;
         margin: 5px 0;
+    }
+    .main_nav .navSubArea {
+        display: none;
     }
 
     /* Form Container */
