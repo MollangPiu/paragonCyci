@@ -77,6 +77,7 @@ Nav.main_nav {
     border-radius: 8px;
 }
 
+/* aside 이등분( 회계 )  상단 */
 .asideDiv {
     display: flex;
     flex-direction: row;
@@ -629,5 +630,42 @@ td:hover .action-buttons {
         padding: 5px;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); /* Smaller shadow for mobile */
         flex-direction: row;
+    }
+
+
+    
+}
+
+@media (max-width: 1200px) {
+    /* aside 이등분( 회계 )  상단 */
+    .asideDiv {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .asideDiv > div:nth-child(2) {
+        width: 100%;
+    }
+
+    .statsArea .statsRow {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .statsArea .statsRow .statsDiv {
+        width: 100%;
+    }
+
+    .statsArea .statsRow .statsDiv .displayStatus {
+        width: 70%;
+    }
+
+    .accountBtnArea {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .accountBtnArea .accountButton-group {
+        width: 100%;
     }
 }
