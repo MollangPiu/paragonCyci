@@ -2,6 +2,8 @@
     --navColor: #343131;
     --navFontColor: #fff;
     --navFontColorAction: #A04747; 
+    --mainColor: #1e90ff;
+    --mainColorHover: #007bff;
 }
 * {
     margin: 0;
@@ -11,6 +13,9 @@
 
 body {
     font-family: Arial, sans-serif;
+}
+Header, main, aside {
+    width: 100%;
 }
 
 Header {
@@ -72,6 +77,9 @@ Nav.main_nav {
     margin-bottom: 10px;
 }
 
+
+
+
 .form-row label {
     width: 100px;
     font-weight: bold;
@@ -116,16 +124,14 @@ Nav.main_nav {
 /* Buttons */
 .button-group.left {
     left: 380px;
-    width: 70%;
 }
 .button-group {
     position: absolute;
-    bottom: 10px;
+    bottom: 30px;
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 
-    border: 3px solid red;
 }
 .button-group.right {
     right: 80px;
@@ -156,7 +162,9 @@ Nav.main_nav {
 
 /* Radio Group */
 .radio-group {
+    width:100%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -177,12 +185,20 @@ Nav.main_nav {
     margin-right: 10px;
 }
 
-/* Data Table */
+
+/* 메인 영역 */
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Allows horizontal scrolling */
+}
+
 .data-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    /* Optional: Prevents table from exceeding container width */
+    table-layout: auto;
 }
+
 
 .data-table thead {
     background-color: #f7f7f7;
@@ -200,7 +216,7 @@ Nav.main_nav {
 }
 
 .data-table tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #f9f9f99b;
 }
 
 .data-table td {
@@ -209,61 +225,181 @@ Nav.main_nav {
 
 /* Table Row Hover Effect */
 .data-table tbody tr:hover {
-    background-color: #f1f1f1; /* Slightly darker background on row hover */
+    background-color: var(--mainColor); /* Slightly darker background on row hover */
+    color: #f9f9f9;
     transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 
-
-
-
-/* Action Buttons Container */
-.action-buttons {
-    position: absolute;
-    right: 10px; /* Align the buttons to the right inside the cell */
-    display: flex;
+.aside_action-buttons {
+    margin-left: 15px;
+    border-radius: 5px;
+    right: 20px;
     gap: 8px;
-    opacity: 0;
-    transition: opacity 0.3s ease; /* Smooth fade effect */
+    transition: opacity 0.3s ease;
+    flex-direction: column;
+}
+
+/* 보조 메뉴 일자 버튼 */
+.aside_action-buttons button{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 3px 8px;
+    background-color: var(--mainColor);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.aside_action-buttons button:hover{
+    background-color: var(--mainColorHover);
+}
+
+
+.action-buttons {
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+    display: none;
+    gap: 8px;
+    transition: opacity 0.3s ease;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 1); /* Stronger shadow effect */
+    flex-direction: column;
 }
 
 /* Show buttons on cell hover */
 td:hover .action-buttons {
-    opacity: 1;
+    
+    display: flex;
 }
 
 /* Action Buttons Styling */
 .action-buttons button {
-    padding: 8px 16px; /* Increased padding for larger button size */
+    padding: 8px 16px;
     font-size: 14px;
-    min-width: 60px; /* Minimum button width for better readability */
+    min-width: 60px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    line-height: 1; /* Ensures text is vertically centered */
+    line-height: 1;
 }
 
 .edit-button {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     color: white;
 }
 
 .delete-button {
-    background-color: #f44336; /* Red */
+    background-color: #f44336;
     color: white;
 }
 
-/* Optional: Button hover effect */
+/* 기타, 수정*/
 .edit-button:hover {
     background-color: #45a049;
 }
 
+/* 기타 삭제 */
 .delete-button:hover {
     background-color: #d32f2f;
 }
 
-/* Table Row Hover Effect */
-.data-table tbody tr:hover {
-    background-color: #f1f1f1; /* Slightly darker background on row hover */
-    transition: background-color 0.3s ease;
+
+@media (max-width: 764px) {
+    /* Adjust Header */
+    Header {
+        height: 50px;
+    }
+    /* Adjust Navigation */
+    Nav.main_nav {
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 5px;
+    }
+    .main_nav .navMainArea{
+        font-size: 16px;
+        font-weight: bold;
+        margin: 5px 0;
+    }
+    .main_nav .navSubArea {
+        display: none;
+    }
+
+    /* Form Container */
+    .form-container {
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    /* Form Rows - Stack labels and inputs vertically */
+    .form-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .form-row label {
+        margin-bottom: 5px;
+    }
+
+    /* Date Range - Stack items vertically */
+    .date-range {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .date-range input[type="date"],
+    .date-range button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    /* Button Group Adjustments */
+    .button-group {
+        position: relative; /* Remove absolute positioning for mobile layout */
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        width: 100%;
+    }
+    .button-group div {
+        width: 100%;
+    }
+
+    .button-group.left {
+        margin-top: 0px;
+        width: 100%;
+        left: 0px;
+    }
+    .button-group.right {
+        margin-top: 35px;
+        right: 0px;
+    }
+
+    .button-group button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .data-table {
+        /* Optional: Change to fixed layout if content forces cells to be too wide */
+        table-layout: fixed;
+    }
+
+    .data-table th, .data-table td {
+        white-space: nowrap; /* Prevents text wrapping */
+    }
+
+    .minHidden {
+        display:none;
+    }
+    
+    /* Hide or reposition the action buttons */
+    .action-buttons {
+        right: 5px;
+        gap: 4px;
+        padding: 5px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); /* Smaller shadow for mobile */
+        flex-direction: row;
+    }
 }
