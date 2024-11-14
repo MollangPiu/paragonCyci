@@ -294,7 +294,12 @@ Nav.main_nav {
     text-align: center;
 }
 
-.data-table th.tableHead {
+div.tableHead {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
     background-color: var(--mainColor);
     color: #fff;
     font-size: 18px;
