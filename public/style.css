@@ -41,7 +41,19 @@ Header {
 /* 가운데 로고 부분 */
 .header .mainHeader {
     width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
+.header .mainHeader .mainMiddleImg {
+    width: 600px;
+    height: 60px;
+    background-image:url('./asset/img/naver.gif');
+    background-size: 100% 100%;
+}
+
+/* heaer, 사용자 정보 */
 .header .mainUser {
     display: flex;
     flex-direction: column;
