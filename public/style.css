@@ -293,6 +293,13 @@ Nav.main_nav {
     text-align: center;
 }
 
+.data-table th.tableHead {
+    background-color: var(--mainColor);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 .data-table th {
     background-color: #f5f5f5;
 }
